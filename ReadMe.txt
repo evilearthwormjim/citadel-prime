@@ -1,8 +1,7 @@
 Reuben's branch
 Julie's sentence.
 Steve's Change
-This is the second sentence added by Peter
-Steve's Change
+This is the second sentence added by Pete
 
 Reuben's Change
 
