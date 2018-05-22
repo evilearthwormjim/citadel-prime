@@ -1,7 +1,6 @@
 package com.rsa.demo.controllers;
 
 import com.rsa.demo.models.ActivityModel;
-import com.rsa.demo.services.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +14,7 @@ import javax.validation.Valid;
 public class ActivityController {
 
     @Autowired
-    ActivityService service;
+    com.rsa.demo.Services.ActivityService service;
 
     @PostMapping
     ActivityModel create(@Valid @RequestBody ActivityModel activityMdl){
