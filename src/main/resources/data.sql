@@ -1,5 +1,5 @@
 insert into user_entity
-values(10001, 36, 'peter.obrien1@rsa.com', 'Peter OBrien', 'aveksa', 'obriep10');
+values(null, 36, 'peter.obrien1@rsa.com', 'Peter OBrien', 'aveksa', 'obriep10');
 
 
 insert into activity_entity (name, description, active)
