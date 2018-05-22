@@ -1,16 +1,8 @@
 package com.rsa.demo.entities;
 
 
-<<<<<<< HEAD:src/main/java/com/rsa/demo/entities/UserEntity.java
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-=======
 import javax.persistence.*;
->>>>>>> 5b3fe6b355b5e7584e5fefd63721386232a9dffa:src/main/java/com/rsa/demo/Entities/UserEntity.java
 
 @RepositoryRestResource
 @Entity
