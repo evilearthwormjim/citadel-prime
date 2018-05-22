@@ -1,4 +1,4 @@
 package com.rsa.demo.Repositories;
 
-public class UserRepository {
+public class ActivityRepository {
 }
