@@ -1,4 +1,4 @@
-package com.rsa.demo.Services;
+package com.rsa.demo.services;
 
 public class ActivityService {
 }
