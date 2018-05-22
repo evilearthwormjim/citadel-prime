@@ -1,4 +1,4 @@
-package com.rsa.demo.Entities;
+package com.rsa.demo.entities;
 
 import javax.persistence.*;
 

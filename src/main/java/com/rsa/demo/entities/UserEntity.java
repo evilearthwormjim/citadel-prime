@@ -1,11 +1,14 @@
 package com.rsa.demo.entities;
 
 
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@RepositoryRestResource
 @Entity
 public class UserEntity {
 

@@ -1,4 +1,4 @@
-package com.rsa.demo.Entities;
+package com.rsa.demo.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +14,7 @@ public class Event {
     private long id;
 
     @Column
-    private String Name;
+    private String name;
 
     @Column
     private String activityId;
@@ -37,11 +37,11 @@ public class Event {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getActivityId() {
