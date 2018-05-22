@@ -1,12 +1,25 @@
 package com.rsa.demo.models;
 
+import javax.validation.constraints.NotBlank;
+
 public class UserModel {
 
+    private Long id;
+    @NotBlank
     private String username;
+    @NotBlank
     private String password;
     private String name;
     private Integer age;
     private String email;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
