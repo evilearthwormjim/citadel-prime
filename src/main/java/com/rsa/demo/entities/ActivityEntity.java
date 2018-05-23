@@ -17,8 +17,7 @@ public class ActivityEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
 
-    @Getter
-    @Setter
+    @Getter @Setter
     @Column
     private String name;
 
@@ -29,8 +28,4 @@ public class ActivityEntity {
     @Getter @Setter
     @Column
     private boolean active;
-
-    public UUID getId() {
-        return id;
-    }
 }
