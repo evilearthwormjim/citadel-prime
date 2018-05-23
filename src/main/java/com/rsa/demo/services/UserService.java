@@ -28,6 +28,16 @@ public class UserService {
         return userList;
     }
 
+    public UserModel getUser(Long id) {
+
+        UserEntity userEntity = userRepository.findById(id).get();
+        UserModel userModel = new UserModel();
+
+        BeanUtils.copyProperties(userEntity, userModel);
+
+        return userModel;
+    }
+
     public void saveUser(UserModel user){
 
         UserEntity newUser = new UserEntity();

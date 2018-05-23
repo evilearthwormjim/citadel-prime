@@ -22,6 +22,12 @@ public class UserController {
     }
 
 
+    @GetMapping("{id}")
+    UserModel getUser(@PathVariable Long id){
+
+        return userService.getUser(id);
+    }
+
     @PostMapping
     UserModel create(@Valid @RequestBody UserModel user){
 
