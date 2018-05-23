@@ -6,6 +6,9 @@ import com.rsa.demo.repositories.ActivityRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 @Service
 public class ActivityService {
@@ -21,5 +24,18 @@ public class ActivityService {
         ActivityEntity activityEnt = new ActivityEntity();
         BeanUtils.copyProperties(activityMdl, activityEnt, "id");
         repository.save(activityEnt);
+    }
+
+    public Iterable<ActivityModel> findAll() {
+        List<ActivityModel> models = new ArrayList<>();
+        Iterator<ActivityEntity> entityIter = repository.findAll().iterator();
+        entityIter.forEachRemaining( entity -> {
+            ActivityModel model = new ActivityModel();
+            model.setName(entity.getName());
+            model.setDescription(entity.getDescription());
+            model.setActive(entity.isActive());
+            models.add(model);
+        });
+        return models;
     }
 }

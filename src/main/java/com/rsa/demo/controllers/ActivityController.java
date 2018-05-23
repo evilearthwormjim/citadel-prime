@@ -2,14 +2,12 @@ package com.rsa.demo.controllers;
 
 import com.rsa.demo.models.ActivityModel;
 import com.rsa.demo.services.ActivityService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-//@RestController
-//@RequestMapping("/activities")
+@RestController
+@RequestMapping("/activities")
 public class ActivityController {
 
     private ActivityService service;
@@ -24,8 +22,9 @@ public class ActivityController {
         return activityMdl;
     }
 
-    @GetMapping
-    Iterable get() {
+    @GetMapping()
+    Iterable<ActivityModel> get() {
         return service.findAll();
+//        return new ResponseEntity<String>(service.findAll(), HttpStatus.OK);
     }
 }
