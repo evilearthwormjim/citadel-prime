@@ -4,12 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
-import java.util.UUID;
 
 public class ActivityModel {
 
     @Getter @Setter
-    private UUID id;
+    private long id;
 
     @Getter @Setter
     @NotBlank

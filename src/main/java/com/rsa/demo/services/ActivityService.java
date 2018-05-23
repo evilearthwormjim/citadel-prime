@@ -34,4 +34,11 @@ public class ActivityService {
         }
         return models;
     }
+
+    public ActivityModel find(Long id) {
+        ActivityEntity entity = repository.findById(id).get();
+        ActivityModel model = new ActivityModel();
+        BeanUtils.copyProperties(entity, model);
+        return model;
+    }
 }

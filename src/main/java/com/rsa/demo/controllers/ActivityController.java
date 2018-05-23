@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+// Using a REST Controller overrides the behavior added by the RepositoryRestResource annotation
+// on ActivituRepository
 @RestController
 @RequestMapping("/activities")
 public class ActivityController {
@@ -18,13 +20,18 @@ public class ActivityController {
     }
 
     @PostMapping
-    ActivityModel create(@Valid @RequestBody ActivityModel activityMdl){
+    ActivityModel create(@Valid @RequestBody ActivityModel activityMdl) {
         service.save(activityMdl);
         return activityMdl;
     }
 
     @GetMapping
-    List<ActivityModel> getAll(){
+    List<ActivityModel> getAll() {
         return service.findAll();
+    }
+
+    @GetMapping("{id}")
+    ActivityModel get(@PathVariable Long id) {
+        return service.find(id);
     }
 }
