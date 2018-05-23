@@ -16,11 +16,10 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    List<UserModel> getAll(){
+    List<UserModel> getAllUsers(){
 
         return userService.getAllUsers();
     }
-
 
     @GetMapping("{id}")
     UserModel getUser(@PathVariable Long id){

@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class UserActivity {
+public class UserActivityEntity {
     @Id
     @GeneratedValue
     private long id;
