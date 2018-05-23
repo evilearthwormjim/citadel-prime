@@ -33,7 +33,15 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compileOnly('org.projectlombok:lombok')
 	runtime('com.h2database:h2')
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+<<<<<<< HEAD
 	testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
 	//testCompile('org.springframework.security:spring-security-test')
+=======
+    //testCompile('org.springframework.security:spring-security-test')
+	testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+
+>>>>>>> e9111118662f5ba17a3843dff7a04b063a661445
 }
