@@ -1,8 +1,8 @@
 package com.rsa.demo.entities;
 
 
-import lombok.Setter;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -16,6 +16,7 @@ public class ActivityEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
+//    private long id;
 
     @Getter @Setter
     @Column

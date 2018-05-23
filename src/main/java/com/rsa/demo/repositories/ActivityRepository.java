@@ -4,8 +4,11 @@ import com.rsa.demo.entities.ActivityEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "activities", path = "activities")
-public interface ActivityRepository extends CrudRepository<ActivityEntity, Long> {
+import java.util.Optional;
+import java.util.UUID;
 
-    ActivityEntity findById(long id);
+@RepositoryRestResource(collectionResourceRel = "activities", path = "activities")
+public interface ActivityRepository extends CrudRepository<ActivityEntity, UUID> {
+
+    Optional<ActivityEntity> findById(UUID id);
 }
