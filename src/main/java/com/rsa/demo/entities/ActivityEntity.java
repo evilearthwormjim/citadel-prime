@@ -16,7 +16,6 @@ public class ActivityEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
-//    private long id;
 
     @Getter @Setter
     @Column
