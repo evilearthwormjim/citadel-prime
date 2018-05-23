@@ -5,6 +5,7 @@ import com.rsa.demo.services.ActivityService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/activities")
@@ -22,9 +23,8 @@ public class ActivityController {
         return activityMdl;
     }
 
-    @GetMapping()
-    Iterable<ActivityModel> get() {
+    @GetMapping
+    List<ActivityModel> getAll(){
         return service.findAll();
-//        return new ResponseEntity<String>(service.findAll(), HttpStatus.OK);
     }
 }

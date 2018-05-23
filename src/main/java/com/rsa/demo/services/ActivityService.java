@@ -7,13 +7,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Service
 public class ActivityService {
 
-//    @Autowired - prefer constructor injection as per Dan's guidelines, slide 37
+//    @Autowired - prefer constructor injection to @Autowired as per Dan's guidelines, slide 37
     ActivityRepository repository;
 
     public ActivityService( ActivityRepository repository) {
@@ -26,16 +25,13 @@ public class ActivityService {
         repository.save(activityEnt);
     }
 
-    public Iterable<ActivityModel> findAll() {
+    public List<ActivityModel> findAll() {
         List<ActivityModel> models = new ArrayList<>();
-        Iterator<ActivityEntity> entityIter = repository.findAll().iterator();
-        entityIter.forEachRemaining( entity -> {
+        for(ActivityEntity entity : repository.findAll()) {
             ActivityModel model = new ActivityModel();
-            model.setName(entity.getName());
-            model.setDescription(entity.getDescription());
-            model.setActive(entity.isActive());
+            BeanUtils.copyProperties(entity, model);
             models.add(model);
-        });
+        }
         return models;
     }
 }
