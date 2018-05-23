@@ -33,7 +33,6 @@ public class UserServiceTest {
 
         UserModel userModel = new UserModel();
 
-
         userModel.setUsername("pob");
         userModel.setPassword("password");
 
@@ -45,7 +44,5 @@ public class UserServiceTest {
         user.setPassword("password");
 
         verify(userRepository, times(1)).save(refEq(user));
-
-
     }
 }
